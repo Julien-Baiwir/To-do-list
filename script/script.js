@@ -1,6 +1,8 @@
 import { addTask } from './addTask.js';
-import { liCreator } from './liCreator.js';
-import { SuppTask } from './SuppTask.js';
+import { Creationlist } from './Creationlist.js';
+import { SupressTask } from './SupressTask.js';
+
 document.getElementById('addTaskButton').addEventListener('click', addTask);
-document.getElementById('suppresion').addEventListener('click', SuppTask);
-liCreator();
+document.getElementById('suppresion').addEventListener('click', SupressTask);
+
+Creationlist();

@@ -1,4 +1,4 @@
-import {liCreator} from './liCreator.js';
+import {Creationlist} from './Creationlist.js';
 
 export let addTask = () => {
     let tabTask = [];
@@ -30,5 +30,5 @@ export let addTask = () => {
     localStorage.setItem('Tableau', tabTaskJson);
 
     inputTask.value = "";
-    liCreator();
+    Creationlist();
 };

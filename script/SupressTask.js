@@ -1,4 +1,4 @@
-export let SuppTask = () => {
+export let SupressTask = () => {
     let tabTaskJson = localStorage.getItem('Tableau');
     let tabTask = JSON.parse(tabTaskJson);
     for (let i = 0; i < tabTask.length; i++) {
