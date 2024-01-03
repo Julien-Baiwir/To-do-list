@@ -1,3 +1,80 @@
-body{
-    background-color: rgb(29, 84, 135);
+@import 'reset';
+
+body {
+    background-color: #161A30;
+    color: #B6BBC4;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically center items */
+    height: 100vh; /* Ensure full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+.box {
+    background-color: #31304D;
+    color: #B6BBC4; 
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%; /* Take full width by default */
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 375px) {
+    .box {
+        max-width: 100%; /* Occupy full width on smaller screens */
+        margin: 0 10px; /* Add some margin to the sides for smaller devices */
+    }
+}
+
+.box__title{
+    margin: 5px;
+}
+
+.form {
+    margin-top: 20px;
+
+    
+}
+
+.form__input,
+.form__button {
+    background-color: #F0ECE5;
+    color: #161A30; 
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+.form__input{
+    width: calc(100% - 22px); 
+}
+
+.box__List {
+    list-style-type: none;
+    padding: 0;
+}
+
+.box__List li {
+    background-color: #B6BBC4;
+    color: #161A30; 
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.box__List li:last-child {
+    margin-bottom: 0; 
+}
+
+.box__suppression {
+    background-color: #F0ECE5;
+    color: #161A30; 
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
 }
