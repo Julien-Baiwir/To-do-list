@@ -4,32 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>to do list</title>
+    <title>Formulaire sans rechargement de page</title>
     <script defer src="script/script.js" type="module"></script>
-    
     <link href="assets/style.css" rel="stylesheet">
 </head>
 
 <body>
+
     <section class="box">
-        <h1 class="box__title">To do list</h1>
-<!-- ---------- -->
+        <h1 class="box__title">Liste à faire</h1>
         <form id="myForm" class="form">
-            <input type="text" class="form__input" id="tacheInput">
-            <input type="submit" class="form__button" value="+" onclick="addTask()">
+            <input type="text" class="form__input" id="tacheInput" placeholder="ex : faire une liste">
+            <input type="submit" class="form__button" value="Ajouter" id="addTaskButton" >
 
         </form>
-<!-- ---------- -->
-        <textarea type="text" class="form__input" id="tacheInput"></textarea>
-            <button id="addTaskButton" class="form__button">+</button>
         <ul id="listeTaches" class="box__List">
         </ul>
 
         <button id="suppresion" class="box__suppression">
-            Suppress task
+            Supprimer les tâches finies
         </button>
     </section>
     
 </body>
-
 </html>
