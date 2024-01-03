@@ -1,20 +1,20 @@
 import {Creationlist} from './Creationlist.js';
 
 export let addTask = () => {
-    let tabTask = [];
-    let tabTaskJsonB = localStorage.getItem('Tableau');
+    let task = [];
+    let taskJsonB = localStorage.getItem('Tableau');
 
-    if (tabTaskJsonB){
-        tabTask = JSON.parse(tabTaskJsonB);
+    if (taskJsonB){
+        task = JSON.parse(taskJsonB);
     }
 
-    let inputTask = document.getElementById('tacheInput');
+    let inputTask = document.getElementById('taskInput');
     let inputTaskValue = inputTask.value;
 
     let maxId = 0;
-    for (let i = 0; i < tabTask.length; i++) {
-        if (tabTask[i].id > maxId) {
-            maxId = tabTask[i].id;
+    for (let i = 0; i < task.length; i++) {
+        if (task[i].id > maxId) {
+            maxId = task[i].id;
         }
     }
 
@@ -24,10 +24,10 @@ export let addTask = () => {
     object.task = inputTaskValue;
     object.state = false;
 
-    tabTask.push(object);
+    task.push(object);
 
-    let tabTaskJson = JSON.stringify(tabTask);
-    localStorage.setItem('Tableau', tabTaskJson);
+    let taskJson = JSON.stringify(task);
+    localStorage.setItem('Tableau', taskJson);
 
     inputTask.value = "";
     Creationlist();

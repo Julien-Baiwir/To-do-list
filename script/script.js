@@ -3,6 +3,6 @@ import { Creationlist } from './Creationlist.js';
 import { SupressTask } from './SupressTask.js';
 
 document.getElementById('addTaskButton').addEventListener('click', addTask);
-document.getElementById('suppresion').addEventListener('click', SupressTask);
+document.getElementById('suppress').addEventListener('click', SupressTask);
 
 Creationlist();

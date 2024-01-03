@@ -1,14 +1,18 @@
 export let Creationlist = () => {
-    let tabTaskJSON = localStorage.getItem('Tableau');
-    if (tabTaskJSON){
-    let tabTask = JSON.parse(tabTaskJSON);
-    let listeTaches = document.getElementById("listeTaches");
-    listeTaches.innerHTML = "";
-    for (let elem of tabTask){
-        let Taches = document.createElement('li');
-        Taches.innerHTML = elem.task
-        Taches.id = elem.id;
-        listeTaches.append(Taches);
+
+    let taskJson = localStorage.getItem('Tableau');
+
+    if (taskJson){
+    let task = JSON.parse(taskJson);
+    let taskslist = document.getElementById("taskslist");
+    taskslist.innerHTML = "";
+
+    for (let elem of task){
+        let tasks = document.createElement('li');
+        tasks.innerHTML = elem.task
+        tasks.id = elem.id;
+        taskslist.append(tasks);
+
         let divRadio = document.createElement('label');
         divRadio.className = "container";
         let checkRadio = document.createElement('input');
@@ -16,19 +20,21 @@ export let Creationlist = () => {
         checkRadio.className = 'radioLi';
         checkRadio.checked = elem.state;
         checkRadio.addEventListener('click', function () {
-             elem.state = checkRadio.checked;
-            let updatedTabTaskJson = JSON.stringify(tabTask);
-            localStorage.setItem('Tableau', updatedTabTaskJson);
-            Taches.classList.toggle('barre');
+        elem.state = checkRadio.checked;
+        let updatedtaskJson = JSON.stringify(task);
+        localStorage.setItem('Tableau', updatedtaskJson);
+        tasks.classList.toggle('barre');
         })
+
         if(elem.state == true){
-            Taches.className='barre';
+            tasks.className='barre';
         }
+        
         let divCheck = document.createElement('div');
         divCheck.className = "checkmark" ;
         divRadio.append(checkRadio);
         divRadio.append(divCheck);
-        Taches.append(divRadio);
+        tasks.append(divRadio);
     }
 }
 }
